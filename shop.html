@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop — Luxera Beauty</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">LU<span>X</span>ERA</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html" class="active">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="cart-btn" id="cartBtn">Bag (0)</button>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="shop-hero">
+    <div>
+      <h1>Our <em>Collection</em></h1>
+      <p>Luxury makeup for every skin tone</p>
+    </div>
+    <span id="productCount">Showing 12 products</span>
+  </div>
+
+  <!-- MAIN LAYOUT -->
+  <div class="shop-body">
+
+    <!-- SIDEBAR FILTERS -->
+    <aside class="sidebar">
+      <h3 class="filter-title">Filters</h3>
+
+      <div class="filter-section">
+        <p class="filter-label">Category</p>
+        <button class="filter-btn active" data-cat="all">All Products</button>
+        <button class="filter-btn" data-cat="lips">Lips</button>
+        <button class="filter-btn" data-cat="eyes">Eyes</button>
+        <button class="filter-btn" data-cat="face">Face</button>
+        <button class="filter-btn" data-cat="skincare">Skincare</button>
+      </div>
+
+      <div class="filter-section">
+        <p class="filter-label">Max Price</p>
+        <div class="price-row">
+          <span>₹0</span><span id="priceVal">₹2000</span>
+        </div>
+        <input type="range" id="priceRange" min="0" max="2000" value="2000" step="50"/>
+      </div>
+
+      <div class="filter-section">
+        <p class="filter-label">Finish</p>
+        <button class="filter-btn" data-finish="matte">Matte</button>
+        <button class="filter-btn" data-finish="glossy">Glossy</button>
+        <button class="filter-btn" data-finish="satin">Satin</button>
+        <button class="filter-btn" data-finish="sheer">Sheer</button>
+      </div>
+
+      <button class="clear-btn" id="clearFilters">Clear All Filters</button>
+    </aside>
+
+    <!-- PRODUCT GRID -->
+    <main class="shop-main">
+      <div class="toolbar">
+        <div class="sort-row">
+          <label>Sort by:</label>
+          <select id="sortSelect">
+            <option value="featured">Featured</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Top Rated</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="products-grid" id="productGrid">
+        <!-- Cards injected by JS -->
+      </div>
+    </main>
+
+  </div>
+
+  <script src="js/shop.js"></script>
+</body>
+</html>
